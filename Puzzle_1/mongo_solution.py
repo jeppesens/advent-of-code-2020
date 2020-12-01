@@ -34,12 +34,18 @@ def puzzle_two():
                 {'$lookup': {
                     'from': collection.name,
                     'as': 'input_3',
-                    'let': {'id2': '$_id'},
+                    'let': {'id2': '$_id', 'input_2': '$input'},
                     'pipeline': [
                         {'$match': {
                             '$expr': {'$gt': ['$$id2', '$_id']}
                         }},
                         {'$unset': ['_id']},
+                        {'$match': {
+                            '$expr': {'$lte': [
+                                {'$add': ['$input', '$$input_2']},
+                                2020
+                            ]},
+                        }},
                     ]
                 }},
                 {'$unset': ['_id']},
