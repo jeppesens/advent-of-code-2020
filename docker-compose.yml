@@ -1,0 +1,12 @@
+version: '3.7'
+
+x-mongo-model: &mongo-model
+  image: mongo:4.4
+  restart: unless-stopped
+
+services:
+  mongo:
+    <<: *mongo-model
+    ports:
+      - 27017:27017
+
