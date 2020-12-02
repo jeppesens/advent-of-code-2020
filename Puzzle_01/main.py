@@ -4,7 +4,7 @@ import math
 
 
 def get_inputs() -> List[str]:
-    with open('Puzzle_1/puzzle-inputs.txt', 'r') as f:
+    with open('Puzzle_01/puzzle-inputs.txt', 'r') as f:
         return [int(i) for i in f.read().split('\n')]
 
 
