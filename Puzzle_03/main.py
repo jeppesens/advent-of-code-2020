@@ -30,7 +30,7 @@ def puzzle_two(args: Tuple[List[str], int]):
 
     result = 1
     for x in hits:
-        result = result * x
+        result *= x
 
     print(f'Solution to puzzle 2 is {result}')
 
@@ -41,7 +41,7 @@ def solve_puzzle(args: Tuple[List[str], int], x_move: int, y_move: int):
     tree_hits = 0
     x, y = 0, 0
     while True:
-        if (lines[y] * math.ceil(x / width + 1))[x] == '#':
+        if lines[y][x - x // width * width] == '#':
             tree_hits += 1
         y += y_move
         x += x_move
