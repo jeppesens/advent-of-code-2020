@@ -64,7 +64,7 @@ def main():
 
     start_2 = time()
     puzzle_two(inputs)
-    print(f'Solved puzzle one in {math.ceil((time() - start_2) * 1000)}ms')
+    print(f'Solved puzzle two in {math.ceil((time() - start_2) * 1000)}ms')
 
     print(f'Solved both puzzles in {math.ceil((time() - start_1) * 1000)}ms')
 
