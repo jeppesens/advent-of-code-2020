@@ -21,7 +21,7 @@ def puzzle_two(inputs: List[int]):
                         v1=v1,
                         v2=v2,
                         v3=v3,
-                        result=v1*v2*v3
+                        result=v1 * v2 * v3
                     ))
 
     for result in results:
@@ -37,7 +37,7 @@ def puzzle_one(inputs: List[int]):
                 results.append(dict(
                     v1=v1,
                     v2=v2,
-                    result=v1*v2,
+                    result=v1 * v2,
                 ))
 
     for result in results:
