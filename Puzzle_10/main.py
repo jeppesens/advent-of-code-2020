@@ -6,7 +6,7 @@ from functools import lru_cache
 
 
 @lru_cache()
-def get_inputs() -> List[str]:
+def get_inputs() -> List[int]:
     with open('Puzzle_10/puzzle-inputs.txt', 'r') as f:
         lines = [int(line) for line in f.read().splitlines()]
         lines.sort()

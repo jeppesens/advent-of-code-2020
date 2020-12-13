@@ -5,8 +5,18 @@ x-mongo-model: &mongo-model
   restart: unless-stopped
 
 services:
-  mongo:
-    <<: *mongo-model
+  # mongo:
+  #   <<: *mongo-model
+  #   ports:
+  #     - 27017:27017
+  app:
     ports:
-      - 27017:27017
+      - 10001:10001
+    build:
+      context: .
+    command: python Puzzle_12/main.py
+    volumes:
+      - ./:/app
+
+
 

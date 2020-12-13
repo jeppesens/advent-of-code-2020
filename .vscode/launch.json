@@ -9,7 +9,20 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "internalConsole"
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Docker: Remote Attach",
+            "type": "python",
+            "request": "attach",
+            "port": 10001,
+            "host": "localhost",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "/app"
+                }
+            ]
         }
     ]
 }
